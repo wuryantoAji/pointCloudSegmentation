@@ -4,7 +4,7 @@
 
 #include "nanoflann.hpp"
 #include "utils.h"
-#include "cv.h"
+#include <opencv2/opencv.hpp>
 
 #include "PointGrowAngleOnly.h"
 #include "PointGrowAngleDis.h"

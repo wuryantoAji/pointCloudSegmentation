@@ -8,7 +8,7 @@
 #pragma once
 
 #include "PCAFunctions.h"
-#include "opencv/cv.h"
+#include <opencv2/opencv.hpp>
 
 class ClusterGrowPLinkage 
 {
