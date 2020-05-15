@@ -15,7 +15,7 @@ using namespace std;
 
 void readDataFromFile(std::string filepath, PointCloud<double> &cloud)
 {
-	cloud.pts.reserve(10000000);
+	cloud.pts.reserve(5000);
 	cout << "Reading data ..." << endl;
 
 	// 1. read in point data
