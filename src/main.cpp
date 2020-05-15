@@ -84,7 +84,7 @@ void writeOutClusters(string filePath, PointCloud<double> &pointData, std::vecto
 	fclose(fp);
 }
 
-void main()
+void main(int argc, char **argv)
 {
 	std::string fileData = "/home/aji/aji-skripsi/data/hasil-test/log1/dump/margonda_3d_Area_1_pred.txt";
 	std::string fileResult = "/home/aji/aji-skripsi/data/hasil-test/log1/dump/result.txt";
@@ -133,4 +133,5 @@ void main()
 	
 	// step4: write out result
 	writeOutClusters(fileResult, pointData, clusters);
+	return 0;
 }
