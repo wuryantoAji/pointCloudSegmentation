@@ -2,7 +2,7 @@
 
 # This script will build code and run the point cloud segmentation
 
-mkdir -p /pointSegment/build && cd /pointSegment/build
+mkdir -p ~/aji-skripsi/pointCloudSegmentation/build && cd ~/aji-skripsi/pointCloudSegmentation/build
 
 cmake ..
 make
