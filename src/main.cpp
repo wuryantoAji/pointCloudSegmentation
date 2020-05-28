@@ -17,7 +17,7 @@ void readDataFromFile(std::string filepath, PointCloud<double> &cloud)
 {
 	cloud.pts.reserve(5000);
 	cout << "Reading data ..." << endl;
-
+	cout << filepath;
 	// 1. read in point data
 	std::ifstream ptReader(filepath);
 	std::vector<cv::Point3d> lidarPoints;
