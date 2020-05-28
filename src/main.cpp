@@ -29,6 +29,7 @@ void readDataFromFile(std::string filepath, PointCloud<double> &cloud)
 	int countTotal = 0;
 	if (ptReader.is_open())
 	{
+		cout << "check";
 		while (!ptReader.eof())
 		{
 			//ptReader >> x >> y >> z >> a >> b >> c >> labelIdx;
