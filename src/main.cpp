@@ -87,23 +87,17 @@ void writeOutClusters(string filePath, PointCloud<double> &pointData, std::vecto
 
 int main()
 {
-	//std::string fileData = "../data-matome/pred-data/margonda_3d_Area_1_build_only_pred.txt";
-	//std::string fileData = "../data-matome/pred-data/margonda_3d_Area_1_pred.txt";
-	//std::string fileData = "../data-matome/pred-data/margonda_3d_Area_1_build_only_pred_change_format.txt";
-	//std::string fileResult = "../result.txt";
-	//std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/dublin_shifted_Area_1_build_only_pred_change_format.txt";
-    //std::string fileResult = "../result/result_dublin1_build_only.txt";
-	//std::string fileData = "/home/aji/aji-skripsi/dublin_shifted_Area_1_pred_change_format.txt";
-    //std::string fileResult = "../result/result_dublin1.txt";
-	std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/dublin_shifted_Area_1_build_only_pred_change_format.txt";
-    std::string fileResult = "../result/result_dublin1_build_only_changeK.txt";
+	//std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/margonda_3d_Area_1_build_only_pred_change_format.txt";
+    //std::string fileResult = "/home/aji/aji-skripsi/result/margondaK200/result_Area1_noNonbuilding_k200.txt";
+	std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/margonda_3d_Area_1_pred_change_format.txt";
+    std::string fileResult = "/home/aji/aji-skripsi/result/margondaK200/result_Area1_k200.txt";
 
 	// step1: read in data
 	PointCloud<double> pointData;
 	readDataFromFile(fileData, pointData);
 
 	// step2: build kd-tree
-	int k = 10000;
+	int k = 200;
 	std::vector<PCAInfo> pcaInfos;
 	PCAFunctions pcaer;
 	pcaer.PCA(pointData, k, pcaInfos);
