@@ -89,15 +89,15 @@ int main()
 {
 	//std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/margonda_3d_Area_1_build_only_pred_change_format.txt";
     //std::string fileResult = "/home/aji/aji-skripsi/result/margondaK200/result_Area1_noNonbuilding_k200.txt";
-	std::string fileData = "/home/aji/aji-skripsi/sem_seg_result_pred/margonda_3d_Area_1_pred_change_format.txt";
-    std::string fileResult = "/home/aji/aji-skripsi/result/margondaK200/result_Area1_k200.txt";
+	std::string fileData = "/home/aji/aji-skripsi/gt-cluster/dublin_Area_1_build_only_gt_change_format.txt";
+    std::string fileResult = "/home/aji/aji-skripsi/gt-cluster/cluster-gt/ground_truth_dublin_k100_1";
 
 	// step1: read in data
 	PointCloud<double> pointData;
 	readDataFromFile(fileData, pointData);
 
 	// step2: build kd-tree
-	int k = 200;
+	int k = 100;
 	std::vector<PCAInfo> pcaInfos;
 	PCAFunctions pcaer;
 	pcaer.PCA(pointData, k, pcaInfos);
